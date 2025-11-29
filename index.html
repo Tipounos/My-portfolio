@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tipoun's portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="File ico.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=arrow_back_ios_new" />
+</head>
+<body>
+    <header>
+        <p id="window-name">Tipoun - Portfolio</p>
+        <p id="window-icons">- ◻ ×</p>
+    </header>
+    <!-- <section id="intro">
+        <p id="terminal-line1" class="terminal-line">> Booting portfolio...</p>
+        <p id="terminal-line2" class="terminal-line"></p>
+        <p id="terminal-line3" class="terminal-line"></p>
+        <p id="terminal-line4" class="terminal-line"></p>
+        <p id="terminal-line5" class="terminal-line"></p>
+    </section> -->
+    <section id="page1" class="page">
+        <div class="container">
+            <button class="folder" onclick="goToProjects()">
+            <img src="Folder ico.png" alt="Folder" class="folder-image">
+            <p class="jersey">Projects</p>
+            </button>
+        </div>
+        <div class="container">
+             <button class="folder" onclick="goToClients()">
+                <img src="Folder ico.png" alt="Folder" class="folder-image">
+                <p class="jersey">Clients reviews</p>
+            </button>
+        </div>
+        <div class="container">
+            <button class="file" onclick="openAboutMe()">
+                <img src="File ico.png" alt="File" class="file-image">
+                <p class="jersey">About-me.txt</p>
+            </button>
+        </div>
+        <div class="container">
+            <button class="file" onclick="openContact()">
+                <img src="File ico.png" alt="File" class="file-image">
+                <p class="jersey">Contact.txt</p>
+            </button>
+        </div>
+
+    </section>
+    <button id="back" onclick="goToMain()"><span class="material-symbols-outlined">arrow_back_ios_new</span></button>
+    <section id="projects-page" class="page">
+        <div class="container">
+            <a class="file" href="https://tipounos.github.io/Octey-portfolio/">
+                <img src="File ico.png" alt="File" class="file-image">
+                <p class="jersey">Octey's portfolio.html</p>
+            </a>
+        </div>
+        <div class="container">
+            <a class="file">
+                <img src="File ico.png" alt="File" class="file-image">
+                <p class="jersey">This website.html</p>
+            </a>
+        </div>
+
+    </section>
+    <section id="clients-page" class="page">
+        <div class="container">
+            <button class="file" onclick="openOctey()">
+                <img src="File ico.png" alt="File" class="file-image">
+                <p class="jersey">Octey.txt</p>
+            </button>
+        </div>
+
+    </section>
+    <div class="popup-wrapper" id="popup-wrapper">
+        <div class="popup" id="popup">
+            <div id="bar">
+                <p id="small-window-title">Review</p>
+                <button id="small-window-icons" onclick="closePopup()">X</button>
+            </div>
+            <p id="text-content"></p>
+            <p id="author"></p>
+        </div>  
+    </div>
+    <div id="blur-layer"></div>
+</body>
+<script src="script.js"></script>
+</html>
