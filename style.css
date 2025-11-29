@@ -151,6 +151,7 @@ a {
     border-color: white;
     border-width: 4px;
     border-style: solid;
+    min-width: 40%;
 }
 
 .popup-wrapper {
@@ -162,6 +163,14 @@ a {
     align-items: center;
     top: 0;
     z-index: 4;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.35s ease, transform 0.35s ease;
+}
+
+.popup-wrapper.show {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 #blur-layer {
@@ -195,7 +204,7 @@ a {
 }
 
 #page1 {
-    display: flex;
+    display: none;
 }
 
 .links {
@@ -227,5 +236,9 @@ li {
 @media screen and (min-width: 800px){
     .popup {
         max-width: 70%;
+    }
+    .page {
+        margin-left: 60px;
+        margin-top: 20px;
     }
 }
