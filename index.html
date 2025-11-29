@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -13,13 +14,13 @@
         <p id="window-name">Tipoun - Portfolio</p>
         <p id="window-icons">- ◻ ×</p>
     </header>
-    <!-- <section id="intro">
+    <section id="intro">
         <p id="terminal-line1" class="terminal-line">> Booting portfolio...</p>
         <p id="terminal-line2" class="terminal-line"></p>
         <p id="terminal-line3" class="terminal-line"></p>
         <p id="terminal-line4" class="terminal-line"></p>
         <p id="terminal-line5" class="terminal-line"></p>
-    </section> -->
+    </section>
     <section id="page1" class="page">
         <div class="container">
             <button class="folder" onclick="goToProjects()">
@@ -34,7 +35,7 @@
             </button>
         </div>
         <div class="container">
-            <button class="file" onclick="openAboutMe()">
+            <button class="file" onclick="openPopup('Hi, I’m Tipoun. I make websites. I learned to code about 2 years ago and learned to do mostly websites even though I coded some short videogames and app', 'Tipoun, web developper', 'About me')">
                 <img src="File ico.png" alt="File" class="file-image">
                 <p class="jersey">About-me.txt</p>
             </button>
@@ -42,7 +43,7 @@
         <div class="container">
             <button class="file" onclick="openContact()">
                 <img src="File ico.png" alt="File" class="file-image">
-                <p class="jersey">Contact.txt</p>
+                <p class="jersey">Socials.txt</p>
             </button>
         </div>
 
@@ -65,7 +66,7 @@
     </section>
     <section id="clients-page" class="page">
         <div class="container">
-            <button class="file" onclick="openOctey()">
+            <button class="file" onclick="openPopup('Franchement, Tipoun ce que tu fais est vraiment super quali. Je trouve que tu t’améliores de jour en jour, et c’est vraiment impressionnant de voir à quel point tes sites s’améliorent en style et en rendu .Tu as vrm un vrai sens du détail et ça se voit dans ton travail. Honnêtement, je recommande à 100% que ce soit pour un portfolio, un site ou autre, tu gères vraiment. Continue comme ça 🔥😁', 'Octey, monteur', 'Review')">
                 <img src="File ico.png" alt="File" class="file-image">
                 <p class="jersey">Octey.txt</p>
             </button>
@@ -75,7 +76,7 @@
     <div class="popup-wrapper" id="popup-wrapper">
         <div class="popup" id="popup">
             <div id="bar">
-                <p id="small-window-title">Review</p>
+                <p id="small-window-title">Popup</p>
                 <button id="small-window-icons" onclick="closePopup()">X</button>
             </div>
             <p id="text-content"></p>
