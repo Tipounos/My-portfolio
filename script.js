@@ -18,6 +18,7 @@ setTimeout(() => {
     document.getElementById("intro").style.display = "none";
     document.getElementById("page1").style.display = "flex";
     document.getElementById("back").style.display = "none";
+    openPopup("Welcome to my portfolio !", "Tipoun, web developper", "Welcome")
 }, 8500);
 
 function goToProjects() {
@@ -47,30 +48,28 @@ function goToClients() {
     document.getElementById("back").style.display = "flex"
 }
 
-function openPopup() {
+function openPopup(text, author, windowName) {
+    const wrap = document.getElementById("popup-wrapper");
     document.getElementById("blur-layer").style.display = "block";
-    document.getElementById("popup-wrapper").style.display = "flex";
+    wrap.style.display = "flex";
+    void wrap.offsetWidth;
+    wrap.classList.add("show");
+    document.getElementById("text-content").innerText = text
+    document.getElementById("author").innerText = author
+    document.getElementById("small-window-title").innerText = windowName
 }
 
 function closePopup() {
+    const wrap = document.getElementById("popup-wrapper");
     document.getElementById("blur-layer").style.display = "none";
-    document.getElementById("popup-wrapper").style.display = "none";
-}
-
-function openOctey() {
-    openPopup()
-    document.getElementById("text-content").innerText = "<< Franchement, Tipoun ce que tu fais est vraiment super quali. Je trouve que tu t’améliores de jour en jour, et c’est vraiment impressionnant de voir à quel point tes sites s'améliorent en style et en rendu .Tu as vrm un vrai sens du détail et ça se voit dans ton travail. Honnêtement, je recommande à 100% que ce soit pour un portfolio, un site ou autre, tu gères vraiment. Continue comme ça 🔥😁>>"
-    document.getElementById("author").innerText = "Octey, monteur"
-}
-
-function openAboutMe() {
-    openPopup()
-    document.getElementById("text-content").innerText = "Hi, I'm Tipoun. I make websites. I learned to code about 2 years ago and learned to do mostly websites even though I coded some short videogames and app"
-    document.getElementById("author").innerText = ""
+    wrap.style.display = "none";
+    wrap.classList.remove("show");
+    setTimeout(() => {
+        wrap.style.display = "none";
+    }, 350);
 }
 
 function openContact() {
-    openPopup()
-    document.getElementById("text-content").innerHTML = '<p>You can contact me here</p><br><li><a href="https://discord.com/users/1403664472643731538" class="links">Discord</a></li><li><a href="https://github.com/Tipounos" class="links">GitHub</a>'
-    document.getElementById("author").innerText = ""
+    openPopup("", "", "Socials")
+    document.getElementById("text-content").innerHTML = '<p>Here are my socials : (Dm me on discord if you need a website)</p><br><li><a href="https://discord.com/users/1403664472643731538" class="links">Discord</a></li><li><a href="https://github.com/Tipounos" class="links">GitHub</a>'
 }
